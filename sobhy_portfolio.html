@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ملف الشيف محمد عدلي التعريفي</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700;900&family=Cairo:wght@400;700;900&display=swap');
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #f7f8f9; /* لون خلفية فاتح */
+            color: #333;
+        }
+       /* ألوان مستوحاة من الأطباق المصرية والتراثية */
+       .header-bg {
+            background-color: #5D4037; /* بني داكن */
+            background-image: linear-gradient(135deg, #5D4037 0%, #FF9800 100%); /* بني مع لمسة برتقالي */
+        }
+       .section-title {
+            color: #5D4037;
+            border-bottom: 3px solid #FF9800; /* لون برتقالي بارز */
+            display: inline-block;
+            padding-bottom: 0.25rem;
+        }
+       .card-skill {
+            background-color: #ffffff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+       .card-skill:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+        }
+       /* تعديلات RTL للخبرة */
+       .experience-item {
+            border-right: 4px solid #5D4037;
+            padding-right: 1.5rem;
+            position: relative;
+        }
+       .experience-item::before {
+            content: '';
+            width: 12px;
+            height: 12px;
+            background-color: #FF9800;
+            border-radius: 50%;
+            position: absolute;
+            right: -8px;
+            top: 0.5rem;
+            z-index: 10;
+        }
+       .gallery-item img {
+            transition: transform 0.3s ease;
+        }
+       .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+        .text-brown-custom {
+            color: #5D4037;
+        }
+    </style>
+</head>
+<body class="antialiased">
+    
+    <script>
+        // Standard Navigation setup
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('menu-button').addEventListener('click', function() {
+                const mobileMenu = document.getElementById('mobile-menu');
+                mobileMenu.classList.toggle('hidden');
+            });
+        });
+    </script>
+
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <span class="text-2xl font-extrabold text-brown-custom">الشيف محمد عدلي</span>
+                </div>
+                <div class="sm:hidden">
+                    <button id="menu-button" class="text-[#333] hover:text-[#FF9800] focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                    </button>
+                </div>
+                <div class="hidden sm:block">
+                    <div class="flex space-x-4">
+                        <a href="#about" class="text-gray-700 hover:text-[#FF9800] px-3 py-2 rounded-md text-sm font-medium transition duration-150">عني</a>
+                        <a href="#experience" class="text-gray-700 hover:text-[#FF9800] px-3 py-2 rounded-md text-sm font-medium transition duration-150">الخبرة التنفيذية</a>
+                        <a href="#strategy" class="text-gray-700 hover:text-[#FF9800] px-3 py-2 rounded-md text-sm font-medium transition duration-150">الكفاءات والإدارة</a>
+                        <a href="#gallery" class="text-gray-700 hover:text-[#FF9800] px-3 py-2 rounded-md text-sm font-medium transition duration-150">معرض الأطباق</a>
+                        <a href="#contact" class="text-gray-700 hover:text-[#FF9800] px-3 py-2 rounded-md text-sm font-medium transition duration-150">تواصل معي</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden sm:hidden px-2 pt-2 pb-3 space-y-1 text-center">
+            <a href="#about" class="text-gray-700 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium transition duration-150">عني</a>
+            <a href="#experience" class="text-gray-700 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium transition duration-150">الخبرة التنفيذية</a>
+            <a href="#strategy" class="text-gray-700 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium transition duration-150">الكفاءات والإدارة</a>
+            <a href="#gallery" class="text-gray-700 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium transition duration-150">معرض الأطباق</a>
+            <a href="#contact" class="text-gray-700 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium transition duration-150">تواصل معي</a>
+        </div>
+    </nav>
+
+    <header id="about" class="header-bg text-white py-16" dir="rtl">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="w-32 h-32 rounded-full overflow-hidden mx-auto mb-4 border-4 border-white shadow-xl">
+                <!-- استخدام صورة الشيف محمد عدلي المرفقة -->
+                <img src="https://i.postimg.cc/vZJmHzbt/IMG-20251021-WA0031-2.jpg" alt="صورة شخصية للشيف محمد عدلي" class="w-full h-full object-cover" onerror="this.onerror=null;this.src='https://placehold.co/128x128/5D4037/FFFFFF?text=%D8%B4%D9%8A%D9%81+%D9%85%D8%AD%D9%85%D8%AF';">
+            </div>
+            <h1 class="text-5xl font-extrabold mb-2">محمد عدلي</h1>
+            <p class="text-2xl font-medium mb-6">رئيس طهاة تنفيذي | متخصص في الافتتاحات، هندسة القوائم، وإدارة التكاليف</p>
+            <p class="max-w-2xl mx-auto text-lg leading-relaxed bg-black bg-opacity-10 p-4 rounded-xl shadow-lg">
+                **رئيس طهاة تنفيذي** بخبرة تمتد لعقد من الزمان، متخصص في قيادة عمليات ما قبل الافتتاح (Pre-Opening) للمطاعم الراقية. أمتلك سجلاً حافلاً في بناء الأنظمة التشغيلية للمطابخ، وتطوير القوائم الاستراتيجية، وتطبيق أنظمة دقيقة **للتحكم في التكاليف (Food Cost Control)** وضمان أرقى معايير سلامة الأغذية (HACCP). لدي شغف عميق بتقديم **فن الطهي العربي الأصيل بلمسة عصرية مبتكرة**، مع الالتزام الراسخ بتقديم تجارب طعام استثنائية تليق بالمستوى الرفيع.
+            </p>
+            <div class="mt-6 space-x-4 flex justify-center">
+                <!-- أيقونات وسائل التواصل الاجتماعي (تم وضعها لغرض التصميم) -->
+                <a href="#" target="_blank" class="text-white hover:text-gray-200 transition duration-150 text-xl" title="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="inline-block"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+                <a href="https://wa.me/97366359415" target="_blank" class="text-white hover:text-gray-200 transition duration-150 text-xl" title="WhatsApp"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="inline-block"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.894 11.892-1.99 0-3.903-.52-5.687-1.475l-6.351 1.688zM7.431 19.179l.341.202c1.632.976 3.487 1.501 5.415 1.501 5.478 0 9.94-4.462 9.94-9.94s-4.462-9.94-9.94-9.94c-5.478 0-9.94 4.462-9.94 9.94 0 2.006.603 3.902 1.687 5.597l.213.324-1.041 3.815 3.844-1.038z"/></svg></a>
+            </div>
+        </div>
+    </header>
+
+    <section id="experience" class="py-16 bg-white" dir="rtl">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold mb-10 text-center section-title mx-auto">الخبرة التنفيذية</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- HEAD CHEF - A HOLDING COMPANY - BAHRAIN -->
+                <div class="experience-item">
+                    <h3 class="text-xl font-semibold text-brown-custom">رئيس طهاة (Head Chef)</h3>
+                    <p class="text-lg font-medium text-gray-700">A Holding Company - زووبا، البحرين</p>
+                    <p class="text-sm text-gray-500 mb-2">من 31/10/2024 - حتى الآن</p>
+                    <ul class="text-gray-600 text-sm list-disc pr-5 space-y-1">
+                        <li>قيادة وتطوير فريق المطبخ، وضمان أعلى مستويات الأداء والالتزام.</li>
+                        <li>إدارة دقيقة للمخزون والطلبيات لضمان سير العمليات التشغيلية وتقليل الهدر.</li>
+                        <li>دور قيادي في افتتاح فروع رئيسية، بما في ذلك **رئيس طهاة الافتتاح لفرع البحرين** (علامة تجارية كويتية).</li>
+                        <li>المساهمة في افتتاح فروع المتحف المصري الكبير والشيخ زايد (مصر).</li>
+                    </ul>
+                </div>
+
+                <!-- HEAD CHEF - ZOOBA RESTAURANT - CAIRO, EGYPT -->
+                <div class="experience-item">
+                    <h3 class="text-xl font-semibold text-brown-custom">رئيس طهاة (Head Chef)</h3>
+                    <p class="text-lg font-medium text-gray-700">مطعم زووبا - القاهرة، مصر</p>
+                    <p class="text-sm text-gray-500 mb-2">01/11/2016 - 11/10/2024</p>
+                    <ul class="text-gray-600 text-sm list-disc pr-5 space-y-1">
+                        <li>إدارة وتطوير الكفاءات لفريق المطبخ لتحسين الأداء والجودة.</li>
+                        <li>تطبيق أنظمة فعالة لإدارة المخزون والطلبيات والتحكم في الهدر (Waste Control).</li>
+                        <li>المشاركة الفعالة في فرق عمل ما قبل الافتتاح لعدة فروع رئيسية.</li>
+                        <li>**تقدم وظيفي سريع ومثبت**: من ستيوارد (2017) إلى شيف (2018)، ثم قائد فريق (2019)، وصولاً إلى رئيس طهاة (2022).</li>
+                        <li>نال جائزة **"موظف الشهر" 3 مرات** تقديراً للأداء الاستثنائي.</li>
+                    </ul>
+                </div>
+                
+                <!-- CHEF - BURGER KING - CAIRO, EGYPT -->
+                <div class="experience-item">
+                    <h3 class="text-xl font-semibold text-brown-custom">شيف</h3>
+                    <p class="text-lg font-medium text-gray-700">برجر كنج - القاهرة، مصر</p>
+                    <p class="text-sm text-gray-500 mb-2">01/01/2016 - 01/10/2016</p>
+                    <ul class="text-gray-600 text-sm list-disc pr-5 space-y-1">
+                        <li>اكتساب خبرة في بيئة عمل سريعة الإيقاع والالتزام بمعايير العلامة التجارية العالمية.</li>
+                        <li>تطوير مهارات قوية في تعدد المهام وإدارة الوقت تحت ضغط عالٍ.</li>
+                        <li>تطبيق ممارسات صارمة للنظافة وسلامة الأغذية.</li>
+                    </ul>
+                </div>
+                
+                <!-- CHEF - KFC - CAIRO, EGYPT -->
+                <div class="experience-item">
+                    <h3 class="text-xl font-semibold text-brown-custom">شيف</h3>
+                    <p class="text-lg font-medium text-gray-700">كنتاكي (KFC) - القاهرة، مصر</p>
+                    <p class="text-sm text-gray-500 mb-2">01/04/2013 - 01/12/2015</p>
+                    <ul class="text-gray-600 text-sm list-disc pr-5 space-y-1">
+                        <li>إتقان أساسيات العمليات القياسية (SOPs) للطهي وضبط الجودة.</li>
+                        <li>الحفاظ على مستويات عالية من النظافة والتعقيم.</li>
+                        <li>ضمان السرعة والدقة والاتساق في تقديم المنتجات خلال ساعات الذروة.</li>
+                    </ul>
+                </div>
+                
+                
+            </div>
+        </div>
+    </section>
+
+    <section id="strategy" class="py-16 bg-[#f7f8f9]" dir="rtl">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold mb-10 text-center section-title mx-auto">الكفاءات الإدارية والاستراتيجية</h2>
+            <div class="mb-12">
+                <h3 class="text-2xl font-semibold mb-6 text-center text-[#333]">المهارات التنفيذية الأساسية</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    
+                    <div class="card-skill p-6 rounded-xl text-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 mx-auto text-[#FF9800] mb-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
+                        <p class="font-bold text-lg">هندسة القوائم (Menu Engineering)</p>
+                        <p class="text-sm text-gray-600">تحليل بيانات القوائم وتصميمها استراتيجياً لتعظيم الربحية ورضا الضيوف.</p>
+                    </div>
+
+                    <div class="card-skill p-6 rounded-xl text-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 mx-auto text-[#FF9800] mb-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 9H4M4 4h16c1.1 0 2.9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2zM10 16h4"></path></svg>
+                        <p class="font-bold text-lg">إدارة تكلفة الغذاء (Food Cost Control)</p>
+                        <p class="text-sm text-gray-600">تطبيق أنظمة رقابة دقيقة على تكاليف الأغذية، من الشراء إلى الإنتاج، لضمان هوامش ربح مستهدفة.</p>
+                    </div>
+
+                    <div class="card-skill p-6 rounded-xl text-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 mx-auto text-[#FF9800] mb-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                        <p class="font-bold text-lg">قيادة فرق الافتتاح (Pre-Opening)</p>
+                        <p class="text-sm text-gray-600">خبرة مثبتة في قيادة عمليات ما قبل الافتتاح، وتأسيس المطابخ من الصفر، وضمان الجاهزية التشغيلية.</p>
+                    </div>
+
+                     <div class="card-skill p-6 rounded-xl text-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 mx-auto text-[#FF9800] mb-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                        <p class="font-bold text-lg">التدريب وتطوير الكفاءات</p>
+                        <p class="text-sm text-gray-600">بناء فرق عمل عالية الأداء من خلال برامج التدريب الموجهة والقيادة الملهمة.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div>
+                <h3 class="text-2xl font-semibold mb-6 text-center text-[#333]">التعليم والتدريب الاحترافي</h3>
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 text-lg text-gray-700 list-disc pr-6">
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-blue-500 ml-2 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l10 5-10 5-10-5 10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
+                            <p><strong>بكالوريوس السياحة والفنادق</strong> - معهد الألسن العالي - القاهرة (2016-2020).</p>
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-green-500 ml-2 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 20l4-16M2 12h20M7 5l-2 14M17 5l2 14"></path></svg>
+                            <p><strong>تدريب هندسة تكلفة القوائم (Food Costing & Menu Engineering)</strong> - مطعم زووبا (2019).</p>
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-red-500 ml-2 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0zM12 9v4M12 17h.01"></path></svg>
+                            <p><strong>تدريب سلامة ونظافة الأغذية (Food Safety & Hygiene)</strong> - مطعم زووبا (2018).</p>
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-yellow-500 ml-2 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
+                            <p><strong>مهارات متقدمة في تطبيقات مايكروسوفت أوفيس</strong> لإدارة التقارير والعمليات.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="gallery" class="py-16 bg-white" dir="rtl">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold mb-10 text-center section-title mx-auto">معرض الأطباق (فن الطهي العربي المعاصر)</h2>
+            <p class="text-center text-gray-600 mb-8">مختارات من أطباقي التي تجمع بين أصالة المطبخ المصري والتقديم العصري الراقي.</p>
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+                
+                <!-- تم تحديث المعرض بالكامل بالصور والروابط الجديدة والتعليقات الاحترافية -->
+                <div class="gallery-item overflow-hidden rounded-xl shadow-lg">
+                    <img src="https://i.postimg.cc/MpCGKDqt/IMG-20251021-WA0033-2.jpg" alt="مقبلات وسلطات" class="w-full h-48 object-cover object-center" onerror="this.onerror=null;this.src='https://placehold.co/300x200/5D4037/FFFFFF?text=طبق+كشري';">
+                    <p class="p-2 text-center text-sm font-semibold text-gray-700 bg-gray-50">مقبلات وسلطات
+</p>
+                </div>
+                
+                <div class="gallery-item overflow-hidden rounded-xl shadow-lg">
+                    <img src="https://i.postimg.cc/3xsw-JBY2/IMG-20251021-WA0020-2.jpg" alt="عصير الكركدية باليمون باطريقه المصرية" class="w-full h-48 object-cover object-center" onerror="this.onerror=null;this.src='https://placehold.co/300x200/5D4037/FFFFFF?text=طاجن+بامية';">
+                    <p class="p-2 text-center text-sm font-semibold text-gray-700 bg-gray-50">عصير الكركدية باليمون بالطريقه المصرية</p>
+                </div>
+                
+                
+                <div class="gallery-item overflow-hidden rounded-xl shadow-lg">
+                    <img src="https://i.postimg.cc/PTK8msS6/IMG-20251021-WA0015-2.jpg" alt="جبنة قريش بالبرتقال" class="w-full h-48 object-cover object-center" onerror="this.onerror=null;this.src='https://placehold.co/300x200/5D4037/FFFFFF?text=مسقعة';">
+                    <p class="p-2 text-center text-sm font-semibold text-gray-700 bg-gray-50">جبنة قريش بالبرتقال</p>
+                </div>
+                
+                <div class="gallery-item overflow-hidden rounded-xl shadow-lg">
+                    <img src="https://i.postimg.cc/nhjzJ5bx/IMG-20251021-WA0017-2.jpg" alt="طاجن مسقعة " class="w-full h-48 object-cover object-center" onerror="this.onerror=null;this.src='https://placehold.co/300x200/5D4037/FFFFFF?text=حواوشي';">
+                    <p class="p-2 text-center text-sm font-semibold text-gray-700 bg-gray-50">طاجن مسقعة </p>
+                </div>
+              
+
+                <div class="gallery-item overflow-hidden rounded-xl shadow-lg">
+                    <img src="https://i.postimg.cc/kg64mZ37/IMG-20251021-WA0019-2.jpg" alt="طاجن أم علي" class="w-full h-48 object-cover object-center" onerror="this.onerror=null;this.src='https://placehold.co/300x200/5D4037/FFFFFF?text=كبدة';">
+                    <p class="p-2 text-center text-sm font-semibold text-gray-700 bg-gray-50">طاجن أم علي</p>
+                </div>
+                
+                <div class="gallery-item overflow-hidden rounded-xl shadow-lg">
+                    <img src="https://i.postimg.cc/HkqLs2d8/IMG-20251021-WA0013-2.jpg" alt="سلطة بنجر بالبرتقال" class="w-full h-48 object-cover object-center" onerror="this.onerror=null;this.src='https://placehold.co/300x200/5D4037/FFFFFF?text=سجق';">
+                    <p class="p-2 text-center text-sm font-semibold text-gray-700 bg-gray-50">سلطة بنجر بالبرتقال</p>
+                </div>
+
+                <div class="gallery-item overflow-hidden rounded-xl shadow-lg">
+                    <img src="https://i.postimg.cc/htzjBwWT/IMG-20251021-WA0010-2.jpg" alt="مزات عصرية" class="w-full h-48 object-cover object-center" onerror="this.onerror=null;this.src='https://placehold.co/300x200/5D4037/FFFFFF?text=فول';">
+                    <p class="p-2 text-center text-sm font-semibold text-gray-700 bg-gray-50">مزات عصرية</p>
+                </div>
+                
+                <div class="gallery-item overflow-hidden rounded-xl shadow-lg">
+                    <img src="https://i.postimg.cc/nhjzJ5bc/IMG-20251021-WA0009-2.jpg" alt="حواوشي مصري" class="w-full h-48 object-cover object-center" onerror="this.onerror=null;this.src='https://placehold.co/300x200/5D4037/FFFFFF?text=طعمية';">
+                    <p class="p-2 text-center text-sm font-semibold text-gray-700 bg-gray-50">حواوشي مصري</p>
+                </div>
+
+                <div class="gallery-item overflow-hidden rounded-xl shadow-lg">
+                    <img src="https://i.postimg.cc/Sx2sh5FK/IMG-20251021-WA0007-2.jpg" alt="طاجن كتف بقري" class="w-full h-48 object-cover object-center" onerror="this.onerror=null;this.src='https://placehold.co/300x200/5D4037/FFFFFF?text=بطاطس';">
+                    <p class="p-2 text-center text-sm font-semibold text-gray-700 bg-gray-50">طاجن كتف بقري</p>
+                </div>
+                
+                <div class="gallery-item overflow-hidden rounded-xl shadow-lg">
+                    <img src="https://i.postimg.cc/FHMKsZNS/IMG-20240508-WA0152.jpg" alt="موزة ضاني" class="w-full h-48 object-cover object-center" onerror="this.onerror=null;this.src='https://placehold.co/300x200/5D4037/FFFFFF?text=مزات';">
+                    <p class="p-2 text-center text-sm font-semibold text-gray-700 bg-gray-50">موزة ضاني</p>
+                </div>
+
+                <div class="gallery-item overflow-hidden rounded-xl shadow-lg">
+                    <img src="https://i.postimg.cc/FHdR4q5V/IMG-20240508-WA0149.jpg" alt="طاجن بطاطس بالدجاج" class="w-full h-48 object-cover object-center" onerror="this.onerror=null;this.src='https://placehold.co/300x200/5D4037/FFFFFF?text=جبنة+بالطماطم';">
+                    <p class="p-2 text-center text-sm font-semibold text-gray-700 bg-gray-50">طاجن بطاطس بالدجاج</p>
+                </div>
+                
+                <div class="gallery-item overflow-hidden rounded-xl shadow-lg">
+                    <img src="https://i.postimg.cc/2Sb6DJR1/FB-IMG-1687080816134.jpg" alt="فطار مصري" class="w-full h-48 object-cover object-center" onerror="this.onerror=null;this.src='https://placehold.co/300x200/5D4037/FFFFFF?text=رز+بلبن';">
+                    <p class="p-2 text-center text-sm font-semibold text-gray-700 bg-gray-50">فطار مصري</p>
+                </div>
+
+                <div class="gallery-item overflow-hidden rounded-xl shadow-lg">
+                    <img src="https://i.postimg.cc/fRtLNFnh/FB-IMG-1687080824384.jpg" alt="غداء متكامل" class="w-full h-48 object-cover object-center" onerror="this.onerror=null;this.src='https://placehold.co/300x200/5D4037/FFFFFF?text=فطير+مشلتت';">
+                    <p class="p-2 text-center text-sm font-semibold text-gray-700 bg-gray-50">غداء متكامل</p>
+                </div>
+           
+
+                <div class="gallery-item overflow-hidden rounded-xl shadow-lg">
+                    <img src="https://i.postimg.cc/Z5BRSgtY/FB-IMG-1687080843826.jpg" alt="كشري مصري" class="w-full h-48 object-cover object-center" onerror="this.onerror=null;this.src='https://placehold.co/300x200/5D4037/FFFFFF?text=بيض+بالبسطرمة';">
+                    <p class="p-2 text-center text-sm font-semibold text-gray-700 bg-gray-50">طبق كشري مصري</p>
+                </div>
+                
+                <div class="gallery-item overflow-hidden rounded-xl shadow-lg">
+                    <img src="https://i.postimg.cc/Gb2TK7fQ/FB-IMG-1687080855508.jpg" alt="شاورما بالارز المصري" class="w-full h-48 object-cover object-center" onerror="this.onerror=null;this.src='https://placehold.co/300x200/5D4037/FFFFFF?text=صينية+فراخ';">
+                    <p class="p-2 text-center text-sm font-semibold text-gray-700 bg-gray-50">شاورما بالارز المصري</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="header-bg text-white py-12" dir="rtl">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold mb-6">تواصل معي</h2>
+            <p class="text-xl mb-6">أتطلع لمناقشة كيف يمكن لخبرتي أن تساهم في تحقيق رؤيتكم.</p>
+            <div class="space-y-4 md:space-y-0 md:flex md:justify-center md:items-center md:space-x-8 md:space-x-reverse">
+                
+                <div class="flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2.9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                    <a href="mailto:mo.sophy02@icloud.com" class="hover:underline">mo.sophy02@icloud.com</a>
+                </div>
+                
+                <div class="flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2 2h-3.47c-.96 0-1.85-.31-2.58-.85L7 16l-3.5 3.5c-.73.54-1.62.85-2.58.85H2a2 2 0 0 1-2-2v-3c0-.96.31-1.85.85-2.58L12 3.5l3.5 3.5c.73.54 1.62.85 2.58.85H20a2 2 0 0 1 2 2z"></path></svg>
+                    <span>(+973) 66359415</span>
+                </div>
+                 
+                 <div class="flex items-center justify-center">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="ml-2"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.894 11.892-1.99 0-3.903-.52-5.687-1.475l-6.351 1.688zM7.431 19.179l.341.202c1.632.976 3.487 1.501 5.415 1.501 5.478 0 9.94-4.462 9.94-9.94s-4.462-9.94-9.94-9.94c-5.478 0-9.94 4.462-9.94 9.94 0 2.006.603 3.902 1.687 5.597l.213.324-1.041 3.815 3.844-1.038z"/></svg>
+                    <a href="https://wa.me/97366359415" target="_blank" class="hover:underline">واتساب</a>
+                </div>
+            </div>
+            <p class="text-sm mt-8 opacity-75">© 2024 محمد عدلي. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+</body>
+</html>
+
